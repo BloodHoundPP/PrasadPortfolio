@@ -1,0 +1,214 @@
+.skills{
+    height: 120vh;
+    position: relative;
+}
+
+.skills-bg{
+    height: 100%;
+    width: 30px;
+    background-color: #000;
+    position: absolute;
+    right: 0;
+}
+
+.skills-wrapper{
+    display: flex;
+    padding: 50px;
+}
+
+.skills-left{
+    flex: 1;
+    display: flex;
+    
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.skills-right{
+    flex: 1;
+    text-align: right;
+}
+
+.skills-title{
+    font-size: 60px;
+    
+}
+
+.skills-description{
+    margin-top: 50px;
+    width: 80%;
+    display: inline-block;
+}
+
+.bar{
+    margin: 20px 0;
+}
+
+.bar:first-child{
+    margin-top: 0;
+}
+
+.bar .info{
+    margin-bottom: 5px;
+}
+
+.info span{
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.progress-line{
+    position: relative;
+    height: 10px;
+    width: 100%;
+    transform-origin: left;
+    transform: scaleX(0);
+    background: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.05),
+                      0px 1px rgba(255,255,255,0.8);
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes animate {
+    100%{
+        transform: scaleX(1);
+    }
+}
+.progress-line span{
+    height: 100%;
+    
+    background: #2FDD92;
+    position: absolute;
+    border-radius: 10px;
+}
+.progress-line.html span{
+    width: 90%;
+}
+
+.progress-line.css span{
+    width: 85%;
+}
+
+.progress-line.javascript span{
+    width: 80%;
+}
+
+.progress-line.react span{
+    width: 90%;
+}
+
+.progress-line.node span{
+    width: 80%;
+}
+
+.progress-line.python span{
+    width: 90%;
+}
+
+.progress-line.django span{
+   width: 70%;
+}
+
+.progress-line.java span{
+    width:  80%;
+}
+
+.progress-line.mongodb span{
+    width:  70%;
+}
+.progress-line span::before{
+    position: absolute;
+    content: "";
+    right: 0;
+    top: -10px;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width:0px ;
+    border-right-width: 0px;
+    border-top-color: #000;
+}
+
+.progress-line span::after{
+    position: absolute;
+    
+    right: 0;
+    top: -28px;
+   background: #000;
+   color:#fff;
+   font-size: 12px;
+   font-weight: 500;
+   padding: 1px 8px;
+   border-radius: 3px;
+}
+
+.progress-line.html span::after{
+    content: "90%";
+}
+
+.progress-line.css span::after{
+    content: "85%";
+}
+
+.progress-line.javascript span::after{
+    content: "80%";
+}
+
+.progress-line.react span::after{
+    content: "90%";
+}
+
+.progress-line.node span::after{
+    content: "80%";
+}
+
+.progress-line.python span::after{
+    content: "90%";
+}
+
+.progress-line.django span::after{
+    content: "70%";
+}
+
+.progress-line.java span::after{
+    content: "80%";
+}
+
+.progress-line.mongodb span::after{
+    content: "70%";
+}
+.skills-medal{
+    margin: 50px 0;
+}
+.skills-medal-img{
+    height: 200px;
+    width: 200px;
+    
+}
+
+@media screen and (max-width:480px){
+    .skills-title{
+        font-size: 30px;
+        
+    }
+    .skills-right{
+        text-align: center;
+    }
+    .skills-medal{
+        display: none;
+    }
+    .bar{
+        position: relative;
+    }
+    .info span{
+        font-size: 15px;
+        font-weight: 300;
+        position: absolute;
+        bottom: 15px;
+        right: 100px;
+    }
+    .skills-description{
+        display: none;
+    }
+}
